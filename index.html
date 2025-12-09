@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="moderate">
+    <div class="container">
+        <h1>🌤️ Weather App</h1>
+        
+        <div class="search-box">
+            <div class="input-wrapper">
+                <input type="text" id="city" placeholder="Enter city name...">
+                <div id="inputError" class="input-error"></div>
+            </div>
+            <button onclick="getWeather()">Search</button>
+        </div>
+
+        <div id="loading">Fetching weather data...</div>
+        <div id="errorMessage"></div>
+        <div id="weatherInfo"></div>
+
+        <div class="history-section">
+            <div class="history-header">
+                <h3>Recent Searches</h3>
+                <button id="deleteHistoryBtn" onclick="deleteHistory()">Clear</button>
+            </div>
+            <div id="historyList"></div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
